@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contractors",
+  "info": {
+    "name": "Contractors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contractor_name": {
+      "type": "string"
+    },
+    "contractor_description": {
+      "type": "text"
+    },
+    "contractor_address": {
+      "type": "string"
+    },
+    "contractor_website": {
+      "type": "string"
+    },
+    "contractor_telephone": {
+      "type": "string"
+    },
+    "contractor_facebook": {
+      "type": "string"
+    },
+    "contractor_line": {
+      "type": "string"
+    },
+    "contractor_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "contractor_lat": {
+      "type": "float"
+    },
+    "contractor_lng": {
+      "type": "float"
+    },
+    "categories": {
+      "collection": "categories"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chatroom_messages",
+  "info": {
+    "name": "ChatroomMessage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "text"
+    },
+    "read": {
+      "type": "boolean"
+    },
+    "chatroom": {
+      "model": "chatroom",
+      "via": "chatroom_messages"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

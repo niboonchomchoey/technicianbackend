@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chatrooms",
+  "info": {
+    "name": "Chatroom"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "roomid": {
+      "type": "string"
+    },
+    "user1": {
+      "type": "string"
+    },
+    "user2": {
+      "type": "string"
+    },
+    "chatroom_messages": {
+      "via": "chatroom",
+      "collection": "chatroom-message"
+    }
+  }
+}

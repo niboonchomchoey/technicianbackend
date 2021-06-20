@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chatrooms",
+      "handler": "chatroom.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chatrooms/count",
+      "handler": "chatroom.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chatrooms/:id",
+      "handler": "chatroom.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chatrooms",
+      "handler": "chatroom.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chatrooms/:id",
+      "handler": "chatroom.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chatrooms/:id",
+      "handler": "chatroom.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
